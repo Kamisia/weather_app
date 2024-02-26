@@ -1,9 +1,15 @@
-import { useContext, createContext, useState, useEffect } from "react";
+import { useContext, createContext, useState } from "react";
 import axios from "axios";
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  //funkcja do obsługi input
+  const [query, setQuery] = useState("Gdańsk");
+  const handleChange = () => {
+    setQuery("Toruń");
+  };
   // Funkcja do pobierania danych o aktualnej pogodzie dla konkretnego miasta
+
   const fetchCurrentWeather = async (city) => {
     const apiKey = import.meta.env.VITE_API_KEY;
     try {
@@ -23,6 +29,8 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         fetchCurrentWeather,
+        query,
+        handleChange,
       }}
     >
       {children}

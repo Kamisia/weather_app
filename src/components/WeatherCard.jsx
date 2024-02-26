@@ -1,18 +1,20 @@
 import { useGlobalContext } from "../Context";
 import { useQuery } from "react-query";
 import { GiWindsock } from "react-icons/gi";
-import { WiThermometer } from "react-icons/wi";
-import { WiHumidity } from "react-icons/wi";
-import { WiUmbrella } from "react-icons/wi";
-import { WiBarometer } from "react-icons/wi";
+import {
+  WiThermometer,
+  WiBarometer,
+  WiHumidity,
+  WiUmbrella,
+} from "react-icons/wi";
 
 const WeatherCard = () => {
-  const { fetchCurrentWeather } = useGlobalContext();
+  const { fetchCurrentWeather, query } = useGlobalContext();
 
   // Pobieranie danych o pogodzie dla podanego miejsca przez użytkownika
   const { data, isLoading, isError } = useQuery(
     ["weather", "city"],
-    () => fetchCurrentWeather("Gdańsk"),
+    () => fetchCurrentWeather(query),
     {
       staleTime: 600000, // Czas ważności danych w milisekundach (10 minut)
     }

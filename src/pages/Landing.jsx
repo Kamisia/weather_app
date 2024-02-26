@@ -4,7 +4,6 @@ const Landing = () => {
   return (
     <>
       <SearchForm />
-      <WeatherCard />
     </>
   );
 };

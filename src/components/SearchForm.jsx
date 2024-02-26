@@ -1,12 +1,15 @@
-//import { useState } from "react";
-const SearchForm = () => {
-  //const [city, setCity] = useState("");
+import WeatherCard from "./WeatherCard";
 
+const SearchForm = () => {
   return (
-    <div className="search-container">
-      <input type="text" placeholder="city..."></input>
-      <button type="submit">Search</button>
-    </div>
+    <>
+      <div className="search-container">
+        <input type="text" placeholder="city..."></input>
+        <button>Search</button>
+      </div>
+
+      <WeatherCard />
+    </>
   );
 };
 
