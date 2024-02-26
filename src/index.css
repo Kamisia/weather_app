@@ -101,3 +101,16 @@ html {
   color: var(--error-color);
   border: solid 1px var(--error-color);
 }
+/*SingleCard*/
+.single-card {
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: var(--shadow-4);
+  width: 250px;
+  
+  background-color: #ffffff;
+  background-image: linear-gradient(340deg, #ffffff 0%, #5899e2 74%);
+}
+.info-container {
+  border: 3px solid green;
+}
