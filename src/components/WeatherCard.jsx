@@ -16,11 +16,11 @@ const WeatherCard = () => {
   if (isError) return <div>Error fetching data</div>;
 
   return (
-    <div>
-      <h1>Single Card</h1>
-      <div>
-        <h2>City: {data.location.name}</h2>
-        <p>Temperature: {data.current.temp_c}°C</p>
+    <div className="single-card">
+      <h1>{data.location.name}</h1>
+      <div className="info-container">
+        <></>
+        <p>: {data.current.temp_c}°C</p>
         <p>Condition: {data.current.condition.text}</p>
         <img src={data.current.condition.icon} />
       </div>

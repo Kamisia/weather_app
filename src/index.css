@@ -1,1 +1,103 @@
+:root {
+  --main-color: #5899e2;
+  --detail-color: #ff9156;
+  --background-color: #b0d2f7;
+  --white-color: #ebf4fe;
+  --black-color: #080e14;
+  --darkgray-color: #29333f;
+  --gray-color: #627385;
+  --info-color: #1466c2;
+  --error-color: #ff5e07;
+  --warning-color: #ffc707;
+  --success-color: #2b8809;
+  --mark-color: #ff7931;
 
+  --transition: 0.3s ease-in-out all;
+
+  /*shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Victor Mono", monospace;
+}
+html {
+  font-size: 100%;
+  background-color: var(--white-color);
+}
+.body {
+}
+/*HEADER*/
+.header {
+  width: 100%;
+  padding-top: 2rem;
+
+  height: 200px;
+
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #5899e2 74%);
+}
+.header h1 {
+  font-weight: 500;
+  padding-left: 1rem;
+  font-size: 5.5rem;
+  text-align: start;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: var(--white-color);
+  text-shadow: -1px 1px 0 var(--detail-color), 1px 1px 0 var(--detail-color),
+    1px -1px 0 var(--detail-color), -1px -1px 0 var(--detail-color);
+}
+.header h3 {
+  color: var(--darkgray-color);
+  font-weight: 100;
+  font-size: 1rem;
+  padding-left: 4rem;
+  margin-top: -23px;
+  padding-top: 0;
+  text-align: start;
+}
+/*INPUT*/
+.search-container {
+  text-align: center;
+  padding: 2rem;
+}
+.search-container input {
+  width: 80%;
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  color: var(--darkgray-color);
+  cursor: pointer;
+  margin-right: 0;
+  max-width: 600px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid var(--darkgray-color);
+}
+
+.search-container button {
+  margin-left: 0;
+  max-width: 100px;
+  padding: 0.5rem;
+  width: 20%;
+  background-color: var(--detail-color);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--black-color);
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid var(--darkgray-color);
+  transition: var(--transition);
+}
+.search-container button:hover {
+  background-color: transparent;
+  color: var(--error-color);
+  border: solid 1px var(--error-color);
+}

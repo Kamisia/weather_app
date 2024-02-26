@@ -1,5 +1,13 @@
+//import { useState } from "react";
 const SearchForm = () => {
-  return <div>search form</div>;
+  //const [city, setCity] = useState("");
+
+  return (
+    <div className="search-container">
+      <input type="text" placeholder="city..."></input>
+      <button type="submit">Search</button>
+    </div>
+  );
 };
 
 export default SearchForm;

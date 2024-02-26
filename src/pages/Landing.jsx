@@ -1,5 +1,12 @@
+import SearchForm from "../components/SearchForm";
+import WeatherCard from "../components/WeatherCard";
 const Landing = () => {
-  return <div>Landing pages</div>;
+  return (
+    <>
+      <SearchForm />
+      <WeatherCard />
+    </>
+  );
 };
 
 export default Landing;
