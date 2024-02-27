@@ -6,11 +6,12 @@ import WeatherCard from "./components/WeatherCard";
 import Header from "./components/Header";
 const App = () => {
   const [location, setLocation] = useState("");
+  const [isFetching, setIsFetching] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (location.trim() !== "") {
-      queryClient.invalidateQueries(["weather", location]);
+      setIsFetching(true);
     }
   };
 
@@ -25,10 +26,11 @@ const App = () => {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["weather", location],
     queryFn: () => fetchWeather(location),
-    enabled: location !== "",
+    enabled: isFetching,
   });
   const handleInputChange = (e) => {
     setLocation(e.target.value);
+    setIsFetching(false);
   };
 
   return (
