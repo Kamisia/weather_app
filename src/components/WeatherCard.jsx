@@ -1,35 +1,42 @@
 import { GiWindsock } from "react-icons/gi";
-import {
-  WiThermometer,
-  WiBarometer,
-  WiHumidity,
-  WiUmbrella,
-} from "react-icons/wi";
+import { WiBarometer, WiHumidity, WiUmbrella } from "react-icons/wi";
 
 const WeatherCard = ({ data }) => {
   return (
     <div className="single-card">
-      <p className="time">{data.location.localtime}</p>
-      <h1>{data.location.name}</h1>
-      <img src={data.current.condition.icon} alt="weather icon" />
+      <div className="title">
+        <h1>{data.location.name}</h1>
+        <p className="temp">{data.current.temp_c}°C</p>
+        <img src={data.current.condition.icon} alt="weather icon" />
+      </div>
       <div className="info-container">
-        <p className="temp">
-          <WiThermometer /> {data.current.temp_c}°C
-        </p>
         <p>
-          <GiWindsock />
+          <span>
+            <GiWindsock />
+          </span>
           {data.current.wind_kph} km/h {data.current.wind_dir}
         </p>
         <p>
-          <WiBarometer /> {data.current.pressure_mb}hPa
+          <span>
+            <WiBarometer />
+          </span>
+          {data.current.pressure_mb}hPa
         </p>
         <p>
-          <WiUmbrella /> {data.current.precip_mm} mm
+          <span>
+            <WiUmbrella />
+          </span>
+          {data.current.precip_mm} mm
         </p>
         <p>
-          <WiHumidity />
+          <span>
+            <WiHumidity />
+          </span>
           {data.current.humidity}%
         </p>
+      </div>
+      <div className="date-container">
+        <p>{data.location.localtime}</p>
       </div>
     </div>
   );

@@ -103,14 +103,59 @@ html {
 }
 /*SingleCard*/
 .single-card {
+  margin-right: auto;
+  margin-left:auto;
   height: 300px;
   border-radius: 5px;
   box-shadow: var(--shadow-4);
   width: 250px;
-  
   background-color: #ffffff;
   background-image: linear-gradient(340deg, #ffffff 0%, #5899e2 74%);
 }
-.info-container {
-  border: 3px solid green;
+.single-card .title {
+  text-align: left;
+  
+  height: 45%;
 }
+.single-card .title h1 {
+  color: var(--white-color);
+  float: left;
+  padding: 0.2rem;
+
+  margin-left: 10px;
+  width: 100%;
+}
+.single-card .title img {
+  height: 60px;
+  width: 60px;
+  float: right;
+
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.single-card .title .temp {
+  color: var(--white-color);
+  font-size: 3rem;
+
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.info-container {
+ 
+  height: 45%;
+}
+.single-card .date-container {
+  height: 10%;
+  color: var(--gray-color);
+  text-align: center;
+}
+.single-card .info-container p span {
+  color: var(--gray-color);
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-right: 5px;
+}
+.single-card .info-container p {
+  font-size: 1rem;
+ 
