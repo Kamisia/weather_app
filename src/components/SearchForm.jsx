@@ -1,15 +1,16 @@
-import WeatherCard from "./WeatherCard";
-
-const SearchForm = () => {
+const SearchForm = ({ handleSubmit, handleInputChange, location }) => {
   return (
-    <>
-      <div className="search-container">
-        <input type="text" placeholder="city..."></input>
-        <button>Search</button>
-      </div>
-
-      <WeatherCard />
-    </>
+    <div className="search-container">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={location}
+          onChange={handleInputChange}
+          placeholder="Enter location"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
   );
 };
 
