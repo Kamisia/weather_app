@@ -31,19 +31,31 @@
 }
 html {
   font-size: 100%;
-  background-color: var(--white-color);
 }
-.body {
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  margin: auto;
+  max-width: 550px;
+  height: 600px;
+  background-color: var(--white-color);
+  box-shadow: var(--shadow-4);
+  border-radius: 8px;
 }
 /*HEADER*/
 .header {
   width: 100%;
-  padding-top: 2rem;
 
-  height: 200px;
-
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #5899e2 74%);
+  border-radius: 8px 8px 0 0;
+  height: 140px;
+  padding-right: 1rem;
+  background-color: var(--white-color);
+  background-image: linear-gradient(315deg, var(--white-color) 0%, #5899e2 74%);
 }
 .header h1 {
   font-weight: 500;
@@ -68,7 +80,7 @@ html {
 /*INPUT*/
 .search-container {
   text-align: center;
-  padding: 2rem;
+  padding: 1.2rem;
 }
 .search-container input {
   width: 80%;
@@ -104,58 +116,64 @@ html {
 /*SingleCard*/
 .single-card {
   margin-right: auto;
-  margin-left:auto;
-  height: 300px;
+  margin-left: auto;
+  height: 350px;
   border-radius: 5px;
   box-shadow: var(--shadow-4);
   width: 250px;
   background-color: #ffffff;
   background-image: linear-gradient(340deg, #ffffff 0%, #5899e2 74%);
+  display: flex;
+  flex-direction: column;
 }
 .single-card .title {
   text-align: left;
-  
-  height: 45%;
 }
 .single-card .title h1 {
   color: var(--white-color);
-  float: left;
-  padding: 0.2rem;
-
-  margin-left: 10px;
+  padding: 0.4rem;
   width: 100%;
+  font-size: 1.5rem;
+}
+.single-card .title .info-first {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
 }
 .single-card .title img {
   height: 60px;
   width: 60px;
-  float: right;
-
-  margin-right: 10px;
-  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 5px;
 }
 .single-card .title .temp {
   color: var(--white-color);
   font-size: 3rem;
-
-  float: left;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-right: auto;
+  margin-left: 5px;
 }
 .info-container {
- 
-  height: 45%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0.5rem;
 }
 .single-card .date-container {
-  height: 10%;
   color: var(--gray-color);
   text-align: center;
-}
-.single-card .info-container p span {
-  color: var(--gray-color);
-  font-size: 1.5rem;
-  padding: 1rem;
-  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: 5px;
 }
 .single-card .info-container p {
-  font-size: 1rem;
- 
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding: 0 5px;
+  color: var(--darkgray-color);
+  margin-bottom: 2px;
+}
+.single-card .info-container p span {
+  color: var(--info-color);
+  margin-right: 20px;
+}

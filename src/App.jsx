@@ -31,20 +31,31 @@ const App = () => {
   const handleInputChange = (e) => {
     setLocation(e.target.value);
     setIsFetching(false);
+    console.log(data.current.condition.icon);
   };
 
   return (
-    <>
-      <Header />
-      <SearchForm
-        handleSubmit={handleSubmit}
-        handleInputChange={handleInputChange}
-        location={location}
-      />
-      {isLoading && <div>Loading...</div>}
-      {isError && <div>Error fetching weather data</div>}
-      {data && <WeatherCard data={data} />}
-    </>
+    <div
+      className="app"
+      style={{
+        background: "url(/src/assets/sun-rays-cloudy-sky.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="container">
+        <Header />
+        <SearchForm
+          handleSubmit={handleSubmit}
+          handleInputChange={handleInputChange}
+          location={location}
+        />
+        {isLoading && <div>Loading...</div>}
+        {isError && <div>Error fetching weather data</div>}
+        {data && <WeatherCard data={data} />}
+      </div>
+    </div>
   );
 };
 

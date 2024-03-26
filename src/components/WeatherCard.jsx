@@ -6,8 +6,10 @@ const WeatherCard = ({ data }) => {
     <div className="single-card">
       <div className="title">
         <h1>{data.location.name}</h1>
-        <p className="temp">{data.current.temp_c}°C</p>
-        <img src={data.current.condition.icon} alt="weather icon" />
+        <div className="info-first">
+          <p className="temp">{data.current.temp_c}°C</p>
+          <img src={data.current.condition.icon} alt="weather icon" />
+        </div>
       </div>
       <div className="info-container">
         <p>
