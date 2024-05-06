@@ -1,3 +1,5 @@
+import { CiSearch } from "react-icons/ci";
+
 const SearchForm = ({ handleSubmit, handleInputChange, location }) => {
   return (
     <div className="search-container">
@@ -8,7 +10,9 @@ const SearchForm = ({ handleSubmit, handleInputChange, location }) => {
           onChange={handleInputChange}
           placeholder="Enter location"
         />
-        <button type="submit">Search</button>
+        <button type="submit">
+          <CiSearch />
+        </button>
       </form>
     </div>
   );
