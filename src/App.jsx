@@ -35,15 +35,7 @@ const App = () => {
   };
 
   return (
-    <div
-      className="app"
-      style={{
-        background: "url(/src/assets/sun-rays-cloudy-sky.jpg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="app">
       <div className="container">
         <Header />
         <SearchForm

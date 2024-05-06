@@ -38,7 +38,12 @@ html {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  background-image: url(/src/assets/sun-rays-cloudy-sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 .container {
   margin: auto;
   max-width: 550px;
